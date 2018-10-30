@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should generate schema from json 1`] = `
+Array [
+  Array [
+    "date",
+    Array [
+      "2017-06-02T00:00:00.000Z",
+    ],
+  ],
+  Array [
+    Array [
+      "title",
+      Array [
+        "Introducing Phenomic 1.0.0 first alpha",
+      ],
+    ],
+    Array [
+      Array [
+        "authors",
+        Array [
+          Array [
+            Array [
+              "bloodyowl",
+            ],
+            Array [
+              Array [
+                0,
+              ],
+              0,
+            ],
+          ],
+        ],
+      ],
+      Array [
+        Array [
+          "body",
+          Array [
+            Object {
+              "c": Array [
+                "Hi there. Alpha blah blah.",
+                0,
+              ],
+              "t": "div",
+            },
+          ],
+        ],
+        0,
+      ],
+    ],
+  ],
+]
+`;
+
+exports[`should generate sql from tables structures 1`] = `
+Array [
+  "CREATE TABLE test(date TEXT,title TEXT,body BLOB);",
+  Array [
+    "CREATE TABLE authors(__id__ TEXT);",
+    0,
+  ],
+]
+`;
+
+exports[`should generate tables structure from schema 1`] = `
+Array [
+  Array [
+    "test",
+    Array [
+      Array [
+        "date",
+        "TEXT",
+      ],
+      Array [
+        Array [
+          "title",
+          "TEXT",
+        ],
+        Array [
+          Array [
+            "body",
+            "BLOB",
+          ],
+          0,
+        ],
+      ],
+    ],
+  ],
+  Array [
+    Array [
+      "authors",
+      Array [
+        Array [
+          "__id__",
+          "TEXT",
+        ],
+        0,
+      ],
+    ],
+    0,
+  ],
+]
+`;
